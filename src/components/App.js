@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     getCharactersFromApi().then((initialData) => {
-      console.log(initialData);
+      // console.log(initialData);
       setData(initialData);
     });
   }, [searchName]);

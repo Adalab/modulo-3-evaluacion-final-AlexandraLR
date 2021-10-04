@@ -25,6 +25,14 @@ function Filters(props) {
         <option value="Dead">Muerto</option>
         <option value="unknown">Desconocido</option>
       </select>
+
+      <button
+        className="select__filter"
+        value={props.searchAlphabetic}
+        onChange={props.handleChangeSearchAlphabetic}
+      >
+        A - Z
+      </button>
     </form>
   );
 }
