@@ -15,7 +15,6 @@ function App() {
 
   useEffect(() => {
     getCharactersFromApi().then((initialData) => {
-      // console.log(initialData);
       setData(initialData);
     });
   }, [searchName]);
@@ -81,7 +80,7 @@ function App() {
           <section>Ups, página errónea, paz entre los mundos!</section>
         </Route>
       </Switch>
-
+      {/* Footer con leyenda de símbolos */}
       <footer className="footer">
         <h4>Leyenda de símbolos</h4>
         <p>
