@@ -89,21 +89,21 @@ function App() {
           <span
             className="iconify"
             data-icon="lucide:smile"
-            id="alive-icon"
+            id="icon-footer"
           ></span>
           Dead:
           <span
             className="iconify"
             data-icon="cil:face-dead"
-            id="dead-icon"
+            id="icon-footer"
           ></span>
           Human:
-          <i class="fas fa-user-astronaut" id="human-icon"></i>
+          <i class="fas fa-user-astronaut" id="icon-footer"></i>
           Alien:
           <span
             class="iconify"
             data-icon="ri:aliens-fill"
-            id="alien-icon"
+            id="icon-footer"
           ></span>
         </p>
       </footer>

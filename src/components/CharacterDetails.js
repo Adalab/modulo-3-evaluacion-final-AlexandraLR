@@ -21,12 +21,12 @@ function CharacterDetails(props) {
             <li className="card__details">
               Especie:{" "}
               {props.user.species === "Human" ? (
-                <i class="fas fa-user-astronaut" id="human-icon-detail"></i>
+                <i class="fas fa-user-astronaut" id="icon-detail"></i>
               ) : (
                 <span
                   className="iconify"
                   data-icon="ri:aliens-fill"
-                  id="alien-icon-detail"
+                  id="icon-detail"
                 ></span>
               )}{" "}
             </li>
@@ -36,7 +36,7 @@ function CharacterDetails(props) {
                 <span
                   className="iconify"
                   data-icon="lucide:smile"
-                  id="alive-icon-detail"
+                  id="icon-detail"
                 >
                   {" "}
                 </span>
@@ -44,7 +44,7 @@ function CharacterDetails(props) {
                 <span
                   className="iconify"
                   data-icon="cil:face-dead"
-                  id="dead-icon-detail"
+                  id="icon-detail"
                 ></span>
               )}
             </li>

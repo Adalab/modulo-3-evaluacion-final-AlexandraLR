@@ -12,27 +12,25 @@ function Filters(props) {
         onChange={props.handleChangeSearchName}
       />
       {/* FILTRO STATUS*/}
-      <label className="filter__status" htmlFor="status">
-        Busca por status
-      </label>
+      <label className="filter__status" htmlFor="status"></label>
       <select
         className="select__filter"
         value={props.searchStatus}
         onChange={props.handleChangeSearchStatus}
       >
-        <option value="all">Todos</option>
-        <option value="Alive">Vivo</option>
-        <option value="Dead">Muerto</option>
-        <option value="unknown">Desconocido</option>
+        <option className="option__select" value="all">
+          Todos
+        </option>
+        <option className="option__select" value="Alive">
+          Vivo
+        </option>
+        <option className="option__select" value="Dead">
+          Muerto
+        </option>
+        <option className="option__select" value="Unknown">
+          Desconocido
+        </option>
       </select>
-
-      <button
-        className="select__filter"
-        value={props.searchAlphabetic}
-        onChange={props.handleChangeSearchAlphabetic}
-      >
-        A - Z
-      </button>
     </form>
   );
 }
