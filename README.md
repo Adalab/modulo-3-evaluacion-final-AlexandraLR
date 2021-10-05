@@ -1,6 +1,6 @@
 # RickANDMortypedia
 
-## _Search, find, learn!_
+## _Search, find, wubba lubba dub dub!_
 
 The Rick And Morty pedia is a app which you can search your favourite character from Rick and Morty and get some information about it.
 
