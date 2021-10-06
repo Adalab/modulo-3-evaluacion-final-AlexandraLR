@@ -12,6 +12,7 @@ function App() {
   const [data, setData] = useState([]);
   const [searchName, setSearchName] = useState("");
   const [searchStatus, setSearchStatus] = useState("all");
+  const [searchType, setSearchType] = useState("");
 
   useEffect(() => {
     getCharactersFromApi().then((initialData) => {
@@ -27,6 +28,10 @@ function App() {
     ev.preventDefault();
     setSearchStatus(ev.currentTarget.value);
   };
+  const handleChangeSearchType = (ev) => {
+    ev.preventDefault();
+    setSearchType(ev.currentTarget.value);
+  };
 
   const routeData = useRouteMatch("/user/:id");
 
@@ -36,10 +41,14 @@ function App() {
   );
 
   const filteredData = data
-    .filter((data) =>
-      data.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
+    .filter((item) =>
+      item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
     )
-    .filter((data) => searchStatus === "all" || data.status === searchStatus);
+    .filter((item) =>
+      item.type.toLocaleLowerCase().includes(searchType.toLocaleLowerCase())
+    )
+    .filter((item) => searchStatus === "all" || item.status === searchStatus);
+  console.log(filteredData);
 
   return (
     <div className="allpage">
@@ -62,8 +71,10 @@ function App() {
               <Filters
                 searchName={searchName}
                 searchStatus={searchStatus}
+                searchType={searchType}
                 handleChangeSearchName={handleChangeSearchName}
                 handleChangeSearchStatus={handleChangeSearchStatus}
+                handleChangeSearchType={handleChangeSearchType}
               />
             </section>
             {/* TARJETAS */}

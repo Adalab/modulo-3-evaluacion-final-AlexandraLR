@@ -11,6 +11,16 @@ function Filters(props) {
         value={props.searchName}
         onChange={props.handleChangeSearchName}
       />
+      <input
+        className="search__character"
+        type="text"
+        name="searchtype"
+        id="searchtype"
+        placeholder="Encuentra el tipo de tu personaje"
+        value={props.searchType}
+        onChange={props.handleChangeSearchType}
+      />
+
       {/* FILTRO STATUS*/}
       <label className="filter__status" htmlFor="status"></label>
       <select

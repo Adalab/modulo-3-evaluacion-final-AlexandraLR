@@ -14,6 +14,7 @@ function getCharactersFromApi() {
           origin: data.origin.name,
           location: data.location.name,
           episode: data.episode.length,
+          type: data.type,
         };
       });
     });
